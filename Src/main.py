@@ -1,10 +1,21 @@
 from fastapi import FastAPI
+from starlette.middleware.base import BaseHTTPMiddleware
+from starlette.responses import Response
+
+
+class NoCacheMiddleware(BaseHTTPMiddleware):
+    async def dispatch(self, request, call_next):
+        response = await call_next(request)
+        response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+        return response
+
 
 app = FastAPI()
 
+# Add the NoCacheMiddleware to your application
+app.add_middleware(NoCacheMiddleware)
 
-# Define a GET operation at the root ("/") of your API
+
 @app.get("/")
-async def root():
-    # Return a simple string directly to the user
-    return "Hello, this is sample website version 2"
+async def main():
+    return "Hello, this is version 3"
