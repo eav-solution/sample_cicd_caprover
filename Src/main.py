@@ -15,6 +15,8 @@ app.add_middleware(
 )
 
 
+# Define a GET operation at the root ("/") of your API
 @app.get("/")
-async def read_root():
-    return "Hello World 3"
+async def root():
+    # Return a simple string directly to the user
+    return "Hello, this is sample website version 1"
