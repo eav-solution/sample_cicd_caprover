@@ -18,4 +18,4 @@ app.add_middleware(NoCacheMiddleware)
 
 @app.get("/")
 async def main():
-    return "Hello, this is version 3"
+    return "Hello, this is version 4"
