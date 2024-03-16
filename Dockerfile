@@ -10,4 +10,5 @@ COPY Src /Src
 
 # Start services
 WORKDIR /Src
+ADD https://www.google.com /time.now
 CMD ["bash", "Run_Production.sh"]
