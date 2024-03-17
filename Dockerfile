@@ -13,6 +13,8 @@ RUN bash install.sh
 
 COPY Src /Src
 
+EXPOSE 80
+
 # Start services
 WORKDIR /Src
 CMD ["bash", "Run_Production.sh"]
