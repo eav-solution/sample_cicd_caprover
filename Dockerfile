@@ -15,5 +15,4 @@ COPY Src /Src
 
 # Start services
 WORKDIR /Src
-RUN mkdir $(date +%Y-%m-%d-%Hh-%Mm-%Ss)
 CMD ["bash", "Run_Production.sh"]
