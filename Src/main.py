@@ -17,4 +17,4 @@ app.add_middleware(NoCacheMiddleware)
 
 @app.post("/test")
 async def main():
-    return "Hello, this is version 10"
+    return "Hello, this is version 11"
