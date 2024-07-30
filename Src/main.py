@@ -15,6 +15,6 @@ app = FastAPI()
 app.add_middleware(NoCacheMiddleware)
 
 
-@app.post("/test")
-async def main():
-    return "Hello, this is version 12"
+@app.get("/")
+async def root():
+    return "Hello, this is version 13"
