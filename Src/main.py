@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 from starlette.middleware.base import BaseHTTPMiddleware
-from starlette.responses import Response
 
 
 class NoCacheMiddleware(BaseHTTPMiddleware):
@@ -18,4 +17,4 @@ app.add_middleware(NoCacheMiddleware)
 
 @app.post("/test")
 async def main():
-    return "Hello, this is version 6"
+    return "Hello, this is version 10"
