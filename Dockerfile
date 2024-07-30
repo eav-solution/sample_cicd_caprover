@@ -17,4 +17,4 @@ EXPOSE 80
 
 # Start services
 WORKDIR /Src
-CMD ["bash", "Run_Production.sh"]
+CMD ["/bin/bash", "Run_Production.sh"]
