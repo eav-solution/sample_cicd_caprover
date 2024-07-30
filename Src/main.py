@@ -12,7 +12,7 @@ class NoCacheMiddleware(BaseHTTPMiddleware):
 app = FastAPI()
 
 # Add the NoCacheMiddleware to your application
-app.add_middleware(NoCacheMiddleware)
+# app.add_middleware(NoCacheMiddleware)
 
 
 @app.get("/")
